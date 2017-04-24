@@ -24,7 +24,7 @@ def tamper(payload, **kwargs):
     '/**//*!50000SELECT*//**/ id /**//*!50000FROM*//**/ users'
     """
   	statements =["SELECT", "UNION", "CONCAT", "FORM", "CAST", "ALL", "OR", "ORDER BY", "WHERE", "HAVING"]	
-  	if !payload: return payload
+  	if not payload: return payload
   	for s in statements:
   		payload = payload.replace(s,"/**//*!50000" + s + "*//**/" )
   	
